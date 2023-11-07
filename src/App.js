@@ -3,7 +3,7 @@ import CamisetaArg from "./img/camiseta-argentina.png";
 import CamisetaNZ from "./img/camiseta-nuevazelanda.png";
 import CamisetaAus from "./img/camiseta-australia.png";
 
-import Navbar from "./components/NavBar/NavBar.js";
+import NavBar from "./components/NavBarFolder/NavBar.js";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";
 
 import "bulma/css/bulma.css";
@@ -13,7 +13,7 @@ function App(){
     return (
         <div>
             <section className="NavBar">
-                <Navbar />
+                <NavBar />
                 <ItemListContainer greeting={"Bienvenidos"}/>
             </section>
             <section className="hero">
