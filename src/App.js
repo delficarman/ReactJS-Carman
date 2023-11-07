@@ -3,7 +3,7 @@ import CamisetaArg from "./img/camiseta-argentina.png";
 import CamisetaNZ from "./img/camiseta-nuevazelanda.png";
 import CamisetaAus from "./img/camiseta-australia.png";
 
-import Navbar from "./components/NavBar/NavBar";
+import Navbar from "./components/NavBar/NavBar.js";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";
 
 import "bulma/css/bulma.css";
