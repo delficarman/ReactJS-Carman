@@ -1,7 +1,7 @@
 import ProfileCard from "./components/ProfileCard.js";
-import CamisetaArg from "./img/camiseta-argentina.png";
-import CamisetaNZ from "./img/camiseta-nuevazelanda.png";
-import CamisetaAus from "./img/camiseta-australia.png";
+import CamisetaArg from "./img/camiseta-arg.jpeg";
+import CamisetaNZ from "./img/camiseta-nz.jpeg";
+import CamisetaAus from "./img/camiseta-aus.webp";
 
 import NavBar from "./components/NavBarFolder/NavBar.js";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";

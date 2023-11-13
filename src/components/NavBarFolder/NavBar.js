@@ -4,7 +4,7 @@ import rugby from "./assets/rugby.jpeg"
 const NavBar = () => {
     return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
+            <div className="navbar-brand">
                 <a className="navbar-item title is-2" href="https://www.rugbyworldcup.com/2023">
                         <img src={rugby} width={80} height={100} alt="logo-rugby"/>
                         Rugby World
