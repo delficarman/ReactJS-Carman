@@ -4,7 +4,7 @@ function ProfileCard(props){
 
     const [count,setCount ] = useState(0);
 
-    function handleClick(){
+    function handleClickSuma(){
         setCount(count+1);
     }
 
@@ -27,12 +27,14 @@ function ProfileCard(props){
                 <h3 className="title is-4">{props.titulo}</h3>
                 <p className="subtitle is-6">${props.precio}</p>
                 <div className="columns">
-                    <div className="column">
-                        <button onClick={handleClick} className="button is-success is-fullwidth">Añadir al carrito</button>
-                        <button onClick={handleClickResta} className="button is-danger is-fullwidth">Restar del carrito</button>
+                    <div className="column is-4">
+                        <button onClick={handleClickSuma} className="button is-success is-fullwidth">+</button>    
                     </div>
-                    <div className="column">
+                    <div className="column is-4">
                         <span>Añadidos en el carrito: {count}</span>
+                    </div>
+                    <div className="column is-4">
+                        <button onClick={handleClickResta} className="button is-danger is-fullwidth">-</button>
                     </div>
                 </div>
             </div>
