@@ -7,6 +7,7 @@ import NavBar from "./components/NavBarFolder/NavBar.js";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";
 
 import "bulma/css/bulma.css";
+import SearchBar from "./components/SearchBar.js";
 
 
 function App(){
@@ -33,6 +34,9 @@ function App(){
                         <ProfileCard titulo="Camiseta Australia" precio={20000} img={CamisetaAus}/>
                     </div>
                 </div>
+            </div>
+            <div>
+                <SearchBar/>
             </div>
         </div>
     )
