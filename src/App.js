@@ -8,9 +8,19 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer.
 
 import "bulma/css/bulma.css";
 import SearchBar from "./components/SearchBar.js";
-
+import searchImages from "./api.js";
+import { useState } from "react";
+import ImageList from "./components/ImageList.js";
 
 function App(){
+
+    const [arrImage, setArrImage]= useState([]);
+
+    const handleSubmit = async(term) => {
+        let resultado= await searchImages(term);
+        setArrImage(resultado);
+    }
+
     return (
         <div>
             <section className="NavBar">
@@ -36,7 +46,8 @@ function App(){
                 </div>
             </div>
             <div>
-                <SearchBar/>
+                <SearchBar enSubmit={handleSubmit}/>
+                <ImageList images={arrImage}/>
             </div>
         </div>
     )
