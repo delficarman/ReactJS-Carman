@@ -1,16 +1,19 @@
-import ProfileCard from "./components/ProfileCard.js";
-import CamisetaArg from "./img/camiseta-arg.jpeg";
-import CamisetaNZ from "./img/camiseta-nz.jpeg";
-import CamisetaAus from "./img/camiseta-aus.webp";
 
-import NavBar from "./components/NavBarFolder/NavBar.js";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";
 
 import "bulma/css/bulma.css";
 import SearchBar from "./components/SearchBar.js";
 import searchImages from "./api.js";
 import { useState } from "react";
 import ImageList from "./components/ImageList.js";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home.js";
+import Equipos from "./pages/Equipos.js";
+import Paises from "./pages/Paises.js";
+import Productos from "./pages/Productos.js";
+import Layout from "./pages/Layout.js";
+
+
 
 function App(){
 
@@ -23,28 +26,16 @@ function App(){
 
     return (
         <div>
-            <section className="NavBar">
-                <NavBar />
-                <ItemListContainer greeting={"Bienvenidos"}/>
-            </section>
-            <section className="hero">
-                <div className="hero-body">
-                    <h1>Camisetas</h1>
-                </div>
-            </section>
-            <div className="container">
-                <div className="columns">
-                    <div className="column is-4">
-                        <ProfileCard titulo="Camiseta Argentina" precio={30000} img={CamisetaArg}/>
-                    </div>
-                    <div className="column is-4">
-                        <ProfileCard titulo="Camiseta Nueva Zelanda" precio={20000} img={CamisetaNZ}/>
-                    </div>
-                    <div className="column is-4">
-                        <ProfileCard titulo="Camiseta Australia" precio={20000} img={CamisetaAus}/>
-                    </div>
-                </div>
-            </div>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Layout/>}>
+                        <Route index element={<Home />}/>
+                        <Route path="/equipos" element={<Equipos />}/>
+                        <Route path="/paises" element={<Paises />}/>
+                        <Route path="/productos" element={<Productos />}/>
+                    </Route>    
+                </Routes>
+            </BrowserRouter>
             <div>
                 <SearchBar enSubmit={handleSubmit}/>
                 <ImageList images={arrImage}/>
@@ -54,3 +45,4 @@ function App(){
 }
 
 export default App;
+
