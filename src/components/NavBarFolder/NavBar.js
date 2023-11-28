@@ -1,6 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget";
 import rugby from "./assets/rugby.jpeg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -12,16 +12,10 @@ const NavBar = () => {
                     </Link>
             </div>
             <div id="navbarBasicExample" className="navbar-menu">
-                <div className="navbar-start buttons are-medium">
-                        <Link to="/productos" className="button is-white" >
-                            Productos
-                        </Link>  
-                        <Link to="/equipos" className="button is-white" >
-                            Equipos
-                        </Link>  
-                        <Link to="/paises" className="button is-white" >
-                            Paises
-                        </Link>  
+                <div className="Categories">
+                    <NavLink to={`/category/arg`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option'}>Argentina</NavLink>
+                    <NavLink to={`/category/nz`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option'}>Nueva Zelanda</NavLink>
+                    <NavLink to={`/category/aus`} className={({isActive})=> isActive ? 'ActiveOption' : 'Option'}>Australia</NavLink>
                 </div>
             </div>
             <div className="navbar-end">
