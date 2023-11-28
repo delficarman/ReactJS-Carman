@@ -12,7 +12,7 @@ import Equipos from "./pages/Equipos.js";
 import Paises from "./pages/Paises.js";
 import Productos from "./pages/Productos.js";
 import Layout from "./pages/Layout.js";
-
+import Producto from "./pages/Producto.js";
 
 
 function App(){
@@ -33,6 +33,7 @@ function App(){
                         <Route path="/equipos" element={<Equipos />}/>
                         <Route path="/paises" element={<Paises />}/>
                         <Route path="/productos" element={<Productos />}/>
+                        <Route path="/productos/:productoId" element={<Producto/>}/>
                     </Route>    
                 </Routes>
             </BrowserRouter>
