@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { db } from "../../services/firebase/firebaseConfig";
 import {getDocs, query, where, collection, Timestamp, writeBatch, documentId, addDoc} from "firebase/firestore";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
+import "./Checkout.css";
 
 
 const Checkout = () => {
@@ -71,16 +72,17 @@ const Checkout = () => {
     }
 
     if (loading){
-        return <h1>Se esta generando su orden...</h1>
+        return <h1 className="Title">Se esta generando su orden...</h1>
     }
 
     if (orderId){
-        return <h1>El id de su orden es: {orderId}</h1>
+        return <h1 className="Title">El id de su orden es: {orderId}</h1>
     }
 
     return(
         <div>
-            <h1>Checkout</h1>
+            <h1 className="Title">Checkout</h1>
+            <p className="Message">Complete el formulario para finalizar su compra:</p>
             <CheckoutForm onConfirm={createOrder}/>
         </div>
     )

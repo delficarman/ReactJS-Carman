@@ -1,14 +1,23 @@
+.CardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
 .card {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: calc(33.33% - 20px); /* Establece el ancho de cada tarjeta */
+    width: calc(33.33% - 20px);
     margin: 10px;
-    display: flex; /* Utiliza flexbox para alinear elementos internos */
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .card-image {

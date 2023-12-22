@@ -4,6 +4,7 @@ import "./Item.css";
 const Item = ({id, image, price, title, stock}) => {
 
     return(
+        <div className="CardContainer">
             <article className="card">
                     <img src={image} alt={title}/>
                     <div className="card-details">
@@ -12,6 +13,7 @@ const Item = ({id, image, price, title, stock}) => {
                         <Link to={`/item/${id}`} className="card-link">Ver detalle</Link>
                     </div>
             </article>
+        </div>
     )
 
 }
