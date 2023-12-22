@@ -2,6 +2,7 @@ import CartWidget from "../CartWidget/CartWidget";
 import rugby from "./assets/rugby.jpeg";
 import { Link, NavLink } from "react-router-dom";
 
+
 const NavBar = () => {
     return (
         <nav className="navbar" role="navigation" aria-label="main navigation">

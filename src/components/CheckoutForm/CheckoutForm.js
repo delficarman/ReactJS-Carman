@@ -45,7 +45,9 @@ const CheckoutForm = ({onConfirm}) => {
                         onChange={({target})=> setEmail(target.value)}
                     />
                 </label>
-
+                <div className="Label">
+                    <button type="submit" className="Button">Crear Orden</button>
+                </div>
             </form>
         </div>
     )
